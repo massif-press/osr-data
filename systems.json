@@ -5,11 +5,11 @@
     "source": "EXOTIC",
     "license": "",
     "license_level": 0,
-    "effect": "<p>Your mech gains the AI tag and Active Assist.</p><p>Additionally, you may load one talent rank you qualify for but do not have onto this system’s ontologic bridge. You gain access to that talent while piloting your mech. If this system is destroyed, neither this talent nor any systems or mech capabilities it grants can be used until it’s repaired. You may choose a different talent rank whenever you take a Full Repair.</p>",
+    "effect": "<p>Your mech gains the AI tag and Active Assist.</p><p>Additionally, you may load one talent rank you qualify for but do not have onto this system’s ontologic bridge. You gain access to that talent while piloting your mech. If this system is destroyed, neither this talent nor any systems or mech capabilities it grants can be used until it’s repaired. You may choose a different talent rank whenever you take a Full Repair.</p><p>This system isn’t a full NHP and cannot enter cascade.</p>",
     "type": "AI",
     "sp": 3,
     "description": "<p>A major cornerstone of GMS's advanced technology initiative is the planned development of a next-generation companion/concierge system to replace the standard EPIPHANY-Class C/C currently in use by Union pilots. For reasons both practical as well as ethical, widespread dissemination of chassis-compatible C/C systems is currently being pushed by Union CentComm over military NHP design, and the ADJUTANT is the latest model to be approved for limited field trials following First Contact Accords compliance evaluation. Utilizing a new-model ontologic bridge framework, ADJUTANT allows for the use of selected simulant/reflex architectures to be uploaded to an engrammatic matrix for compatible pilot integration along both first- and second-tier neural processes. Long-term effects of repeated engrammatic synthesis are currently unknown, but early feedback is promising with test pilots reporting minimal difficulty expressing previously unheld aptitudes.</p>",
-    "tags": [{ "id": "tg_ai" }, { "id": "tg_unique" }, { "id": "tg_exotic" }],
+    "tags": [{ "id": "tg_ai" }, { "id": "tg_no_cascade" }, { "id": "tg_unique" }, { "id": "tg_exotic" }],
     "actions": [
       {
         "name": "Active Assist",
