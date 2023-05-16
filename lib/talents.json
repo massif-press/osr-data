@@ -1,7 +1,7 @@
 [
   {
     "id": "t_demolitionist",
-    "name": "DEMOLITIONIST",
+    "name": "Demolitionist",
     "description": "Explosives and warfare go together like alcohol and bad decisions. The power of a bomb in the palm of your hand is a great equalizer, and a well-placed satchel charge or two has brought even the mightiest of fortifications tumbling down. Forget bullets with names etched on them, the packages you deliver go out addressed “To Whom It May Concern,” and you’ve got plenty to go around.",
     "ranks": [
       {
@@ -20,7 +20,7 @@
   },
   {
     "id": "t_sysop",
-    "name": "SYSOP",
+    "name": "SysOp",
     "terse": "",
     "description": "Modern systemic warfare is a filthy mess of code-worms, logic bombs, and adaptive viruses, to say nothing of all the physical detritus that litters the battlefield, and you’re the one responsible for keeping things clean. System operator or system optimizer, formatting software barriers or tuning servos, your command of diagnostic programs and deep-level hardware overrides gives you all the tools you need to push your squad’s limits beyond manufacturer spec with orderly, surgical precision.",
     "ranks": [
@@ -29,7 +29,9 @@
         "description": "When you Bolster an allied character, the additional Accuracy they gain lasts until their next skill check or save.",
         "synergies": [
           {
-            "locations": ["bolster"],
+            "locations": [
+              "bolster"
+            ],
             "detail": "When you Bolster an allied character, the additional Accuracy they gain lasts until their next skill check or save."
           }
         ]
@@ -39,7 +41,9 @@
         "description": "When you Bolster an allied character, tech attacks against them receive +1 Difficulty until the end of their next turn",
         "synergies": [
           {
-            "locations": ["bolster"],
+            "locations": [
+              "bolster"
+            ],
             "detail": "When you Bolster an allied character, tech attacks against them receive +1 Difficulty until the end of their next turn"
           }
         ]
@@ -49,7 +53,9 @@
         "description": "1/round, when you Bolster an ally, you induce a special cycle into their reactor. They reduce the next amount of heat they would take from a hostile character to 0, and that character takes 2 heat and becomes Impaired until the end of their next turn. This effect does not stack, and lasts until triggered.",
         "synergies": [
           {
-            "locations": ["bolster"],
+            "locations": [
+              "bolster"
+            ],
             "detail": " 1/round, when you Bolster an allied character, you induce a special cycle in their reactor. They reduce the next amount of heat they would take from a hostile character to 0, and that character takes 2 heat and becomes Impaired until the end of their next turn. This effect does not stack, and lasts until triggered."
           }
         ]
