@@ -25,7 +25,7 @@
     "source": "EXOTIC",
     "license": "",
     "license_level": 0,
-    "effect": "Expend a charge from this system for one of the following effects",
+    "effect": "Expend a charge from this system for one of the following effects:",
     "type": "System",
     "sp": 3,
     "description": "<p>GMS’s latest intelligent munition system is a self-contained, multi-mode weapon designed to be easily deployable from a variety of chassis. Boasting advanced decision-making capabilities, each drone-tier charge is capable of independent target selection and interception, maintaining regular pilot-in-the-loop protocols to ensure optimal detonation parameters.</p>",
@@ -38,7 +38,7 @@
       {
         "name": "Smart Grenade",
         "activation": "Quick",
-        "detail": "All hostile characters within the affected area must pass a Systems save or take 1d6 energy damage and gain Lock On. On a success, they gain Lock On only",
+        "detail": "All hostile characters within the affected area must pass a Systems save or take 1d6 energy damage and gain Lock On. On a success, they gain Lock On only.",
         "cost": 0,
         "pilot": false,
         "damage": [{ "type": "Energy", "val": "1d6" }],
@@ -60,7 +60,7 @@
           {
             "name": "Selective Detonation",
             "activation": "Reaction",
-            "detail": "The mine detonates and affected characters must pass an Agility save or take 2d6 explosive damage. On a success, they take half damage",
+            "detail": "The mine detonates and affected characters must pass an Agility save or take 2d6 explosive damage. On a success, they take half damage.",
             "trigger": "A character enters the lurker mine’s space or an adjacent space, or begins their turn there.",
             "damage": [{ "type": "Explosive", "val": "2d6" }]
           }
