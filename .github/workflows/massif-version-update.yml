@@ -1,0 +1,34 @@
+# This workflow will update the C/C directory version (for Massif Packs only)
+
+name: Bump COMP/CON Directory Version
+
+on:
+  workflow_call:
+    secrets:
+      CC_API_KEY:
+        description: 'COMP/CON API Key'
+        required: true
+      CC_DIR_ID:
+        description: 'Directory Item ID'
+        required: true
+
+jobs:
+  call_api_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo VERSION=$(jq -j '.version' ./package.json) >> $GITHUB_ENV
+      - name: Call API endpoint
+        env:
+          CC_API_KEY: ${{ secrets.CC_API_KEY }}
+          CC_DIR_ID: ${{ secrets.CC_DIR_ID }}
+        run: |
+          # Modify the API endpoint and payload according to your requirements
+          API_ENDPOINT="https://example.com/api"
+          PAYLOAD='{"id": CC_DIR_ID, "version": VERSION}'
+
+          # Make the API call using curl (you can use any other tool or language here)
+          curl -X POST $API_ENDPOINT \
+            -H "Authorization: Bearer $CC_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD"
