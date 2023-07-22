@@ -8,8 +8,8 @@ on:
     types: [created]
 
 jobs:
-  call-butler-publish:
+  call-dir-version-update:
     uses: massif-press/.github/.github/workflows/massif-version-update.yml@master
     secrets:
       CC_API_KEY: ${{ secrets.CC_API_KEY }}
-      CC_DIR_ID: ${{ secrets.CC_API_KEY }}
+      CC_DIR_ID: ${{ secrets.CC_DIR_ID }}
