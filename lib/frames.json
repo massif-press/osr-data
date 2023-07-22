@@ -40,10 +40,10 @@
     "core_system": {
       "name": "Advanced Intrusion Package",
       "active_name": "Wide-Area Code Pulse",
-      "active_effect": "Choose any number of hostile characters within Sensors and make a special Invade tech attack against them, ignoring Invisible and line of sight. On hit, apply the effects of Invade as normal, choosing options for each target. On miss, targets become Impaired until the end of their next turn",
+      "active_effect": "Choose any number of hostile characters within Sensors and make a special Invade tech attack against them, ignoring Invisible and line of sight. On hit, apply the effects of Invade as normal, choosing options for each target. On miss, targets become Impaired until the end of their next turn.",
       "activation": "Full",
       "passive_name": "Advanced Intrusion Package",
-      "passive_effect": "Gain the following options for Invade",
+      "passive_effect": "Gain the following options for Invade:",
       "passive_actions": [
         {
           "name": "Balance Control Lockout",

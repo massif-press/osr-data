@@ -4,7 +4,13 @@
     "name": "Up-Armoring",
     "type": "Mech",
     "label": "Resource",
-    "description": "It’s a simple and straightforward battlefield modification to affix additional plating to a chassis’ exterior. Your mech gains +1 ARMOR for the duration of the next mission (to a maximum of 4), and you start the next combat with +5 OVERSHIELD."
+    "description": "It’s a simple and straightforward battlefield modification to affix additional plating to a chassis’ exterior. Your mech gains +1 Armor for the duration of the next mission (to a maximum of 4), and you start the next combat with +5 Overshield.",
+    "bonuses": [
+      {
+        "id": "armor",
+        "val": 1
+      }
+    ]
   },
   {
     "id": "reserve_hot_load_ammunition",
@@ -53,7 +59,7 @@
     "name": "Golden Ticket",
     "type": "Resource",
     "label": "Resource",
-    "description": "1st Lt. Kim is only authorized to distribute so many limited-access licenses, but a little off-the-books code-cloning by Rio can help stretch those licenses a bit further. You gain a piece of Exotic Gear from OPERATION SOLSTICE RAIN"
+    "description": "1st Lt. Kim is only authorized to distribute so many limited-access licenses, but a little off-the-books code-cloning by Rio can help stretch those licenses a bit further. You gain a piece of Exotic Gear from Operation Solstice Rain."
   },
   {
     "id": "reserve_personal_touch",
