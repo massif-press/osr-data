@@ -53,7 +53,6 @@
         "name": "Lurker Mine",
         "type": "Mine",
         "detail": "This mine does not detonate as normal. Instead, gain the Selective Detonation reaction, which can be performed once per deployed lurker mine.",
-        "size": 1,
         "instances": 1,
         "cost": 1,
         "actions": [
