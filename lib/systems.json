@@ -39,7 +39,6 @@
         "name": "Smart Grenade",
         "activation": "Quick",
         "detail": "All hostile characters within the affected area must pass a Systems save or take 1d6 energy damage and gain Lock On. On a success, they gain Lock On only.",
-        "cost": 0,
         "pilot": false,
         "damage": [{ "type": "Energy", "val": "1d6" }],
         "range": [
@@ -53,16 +52,16 @@
         "name": "Lurker Mine",
         "type": "Mine",
         "detail": "This mine does not detonate as normal. Instead, gain the Selective Detonation reaction, which can be performed once per deployed lurker mine.",
-        "size": 1,
-        "instances": 1,
-        "cost": 1,
+        "damage": [{ "type": "Explosive", "val": "2d6" }],
+        "range": [{ "type": "Burst", "val": 1 }],
         "actions": [
           {
             "name": "Selective Detonation",
             "activation": "Reaction",
             "detail": "The mine detonates and affected characters must pass an Agility save or take 2d6 explosive damage. On a success, they take half damage.",
             "trigger": "A character enters the lurker mine’s space or an adjacent space, or begins their turn there.",
-            "damage": [{ "type": "Explosive", "val": "2d6" }]
+            "damage": [{ "type": "Explosive", "val": "2d6" }],
+            "range": [{ "type": "Burst", "val": 1 }]
           }
         ]
       }
@@ -84,7 +83,7 @@
         "name": "LinAc CBC",
         "activation": "Full",
         "detail": "Activate this devastating charged particle cannon, firing it in a Line 30 path. All sources of cover, terrain, objects, and deployables smaller than Size 5 in this area are boiled away instantly, and then all characters within the area must pass an Agility save or take 14 energy damage. On a success, they take half damage. This damage can’t be reduced in any way. Characters with 7 HP or less, only 1 Structure remaining, and no Immunity to damage are instead instantly and automatically destroyed, annihilated utterly and leaving no wreck behind.<br>You can take no other actions on the same turn you activate this particle cannon except for your standard move or Boost, and the stress of firing it causes you to become Stunned until the start of your next turn.",
-        "damage": [{ "type": "Energy", "val": "14" }],
+        "damage": [{ "type": "Energy", "val": 14 }],
         "range": [{ "type": "Line", "val": 30 }]
       }
     ]
