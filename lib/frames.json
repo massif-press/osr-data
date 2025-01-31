@@ -34,7 +34,21 @@
       },
       {
         "name": "Replaceable Parts",
-        "description": "While resting, the Chomolungma can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs."
+        "description": "While resting, the Chomolungma can be repaired at a rate of 1 Repair per 1 structure damage, instead of 2 Repairs.",
+        "bonuses": [
+          {
+            "id": "cheap_struct",
+            "val": 1
+          }
+        ],
+        "synergies": [
+          {
+            "locations": [
+              "rest"
+            ],
+            "detail": "The Chomolungma can be repaired at a rate of 1 Repair per 1 structure damage."
+          }
+        ]
       }
     ],
     "core_system": {
