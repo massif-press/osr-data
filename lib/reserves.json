@@ -27,8 +27,7 @@
     "add_status": [
       {
         "id": "Prone",
-        "save": true,
-        "save_stat": "Hull"
+        "save": "Hull"
       }
     ]
   },
@@ -53,7 +52,7 @@
     ],
     "damage": [
       {
-        "type": "kinetic",
+        "type": "Kinetic",
         "val": 2,
         "ap": true
       }
@@ -114,11 +113,11 @@
         "frequency": "1/mission",
         "damage": [
           {
-            "type": "explosive",
+            "type": "Explosive",
             "val": "3d6",
             "aoe": "Blast 2",
-            "save": "half",
-            "save_stat": "Agility"
+            "save": "Agility",
+            "save_half": true
           }
         ],
         "range": 3

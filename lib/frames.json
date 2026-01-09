@@ -86,11 +86,11 @@
           "detail": "Your target takes an additional 2 heat, for a total of 4 heat. If this Invade causes them to exceed their Heat Cap, they take 4 burn as well. This can only be used 1/scene on each character.",
           "damage": [
             {
-              "type": "heat",
+              "type": "Heat",
               "val": 2
             },
             {
-              "type": "burn",
+              "type": "Burn",
               "val": 4
             }
           ]
