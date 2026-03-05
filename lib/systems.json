@@ -21,7 +21,8 @@
         "detail": "1/scene, you may take a quick action of your choice. This action cannot be an attack or force any saves.",
         "frequency": "1/scene"
       }
-    ]
+    ],
+    "license_id": ""
   },
   {
     "id": "ms_pattern_c_advanced_charges",
@@ -65,7 +66,8 @@
           }
         ]
       }
-    ]
+    ],
+    "license_id": ""
   },
   {
     "id": "ms_miniaturized_linac_coherent_beam_cannon",
@@ -86,6 +88,7 @@
         "damage": [{ "type": "Energy", "val": 14 }],
         "range": [{ "type": "Line", "val": 30 }]
       }
-    ]
+    ],
+    "license_id": ""
   }
 ]

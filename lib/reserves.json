@@ -10,6 +10,12 @@
         "id": "armor",
         "val": 1
       }
+    ],
+    "active_effects": [
+      {
+        "name": "Up-Armoring",
+        "detail": "You start the next combat with +5 Overshield."
+      }
     ]
   },
   {
@@ -36,7 +42,13 @@
     "name": "Recon Drone",
     "type": "Tactical",
     "label": "Resource",
-    "description": "With the intense signal jamming blanketing the city, these high-ceiling, long-loiter drones provide some of the best intel a pilot is likely to get. At the start of each combat, choose a single hostile character within Range 50 and Scan them. This does not require line of sight."
+    "description": "With the intense signal jamming blanketing the city, these high-ceiling, long-loiter drones provide some of the best intel a pilot is likely to get. At the start of each combat, choose a single hostile character within Range 50 and Scan them. This does not require line of sight.",
+    "active_effects": [
+      {
+        "name": "Recon Drone",
+        "detail": "At the start of each combat, choose a single hostile character within Range 50 and Scan them. This does not require line of sight."
+      }
+    ]
   },
   {
     "id": "reserve_sniper_team",
@@ -76,14 +88,42 @@
     "name": "Leg Enhancements",
     "type": "Mech",
     "label": "Resource",
-    "description": "Mechs are already built to navigate uneven terrain, but joint and servo reinforcements can make a good thing even better. Your mech ignores difficult terrain for the duration of the upcoming mission. Additionally, once during the mission you can spend this reserve to ignore Slowed or Immobilized received from a hostile source, negating the condition as it happens."
+    "description": "Mechs are already built to navigate uneven terrain, but joint and servo reinforcements can make a good thing even better. Your mech ignores difficult terrain for the duration of the upcoming mission. Additionally, once during the mission you can spend this reserve to ignore Slowed or Immobilized received from a hostile source, negating the condition as it happens.",
+    "active_effects": [
+      {
+        "name": "Leg Enhancements",
+        "detail": "Your mech ignores difficult terrain for the duration of the mission."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Override Leg Servos",
+        "activation": "Reaction",
+        "frequency": "1/mission",
+        "trigger": "You would receive Slowed or Immobilized from a hostile source.",
+        "detail": "Negate the Slowed or Immobilized condition as it happens."
+      }
+    ]
   },
   {
     "id": "reserve_high_mobility_pack",
     "name": "High-Mobility Pack",
     "type": "Mech",
     "label": "Resource",
-    "description": "The LSA uses these externally mounted flight units for rapid assault and air-drop operations, and the schematics are easy enough to modify and print to GMS standard. You can spend this reserve at the start of any combat to count any and all of your movement as flying for the rest of that scene. Additionally, you may deploy yourself anywhere on the map after all other characters (PCs and NPCs) have deployed."
+    "description": "The LSA uses these externally mounted flight units for rapid assault and air-drop operations, and the schematics are easy enough to modify and print to GMS standard. You can spend this reserve at the start of any combat to count any and all of your movement as flying for the rest of that scene. Additionally, you may deploy yourself anywhere on the map after all other characters (PCs and NPCs) have deployed.",
+    "actions": [
+      {
+        "name": "Activate High-Mobility Pack",
+        "activation": "Free",
+        "detail": "Spend this reserve at the start of combat. All your movement counts as flying for the rest of that scene. You may deploy yourself anywhere on the map after all other characters have deployed."
+      }
+    ],
+    "active_effects": [
+      {
+        "name": "High-Mobility Pack",
+        "detail": "All your movement counts as flying. You may deploy yourself anywhere on the map after all other characters have deployed."
+      }
+    ]
   },
   {
     "id": "reserve_golden_ticket",
@@ -97,7 +137,20 @@
     "name": "Personal Touch",
     "type": "Mech",
     "label": "Resource",
-    "description": "It looks like Vonna’s taken a shine to you, or at the very least taken a shine to your chassis. Your mech gains a free Custom Paint Job for the duration of the next mission, and you can also spend this reserve to gain +1 Accuracy on all mech skill checks and saves during a combat of your choice."
+    "description": "It looks like Vonna's taken a shine to you, or at the very least taken a shine to your chassis. Your mech gains a free Custom Paint Job for the duration of the next mission, and you can also spend this reserve to gain +1 Accuracy on all mech skill checks and saves during a combat of your choice.",
+    "active_effects": [
+      {
+        "name": "Custom Paint Job",
+        "detail": "Your mech gains a free Custom Paint Job for the duration of the next mission."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Personal Touch",
+        "activation": "Free",
+        "detail": "Spend this reserve during a combat of your choice to gain +1 Accuracy on all mech skill checks and saves for that combat."
+      }
+    ]
   },
   {
     "id": "reserve_return_to_sender",
