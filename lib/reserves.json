@@ -10,6 +10,12 @@
         "id": "armor",
         "val": 1
       }
+    ],
+    "active_effects": [
+      {
+        "name": "Up-Armoring",
+        "detail": "You start the next combat with +5 Overshield."
+      }
     ]
   },
   {
@@ -17,42 +23,112 @@
     "name": "Hot-Load Ammunition",
     "type": "Tactical",
     "label": "Resource",
-    "description": "Adding this much additional power to a weapon’s ammunition is generally not sanctioned, but it is effective. You can spend this reserve to empower your weapons. The next successful ranged or melee attack you make can’t have its damage reduced in any way, and the target must pass a Hull save or be knocked Prone. This effect ends when you hit with a ranged or melee attack roll, or at the end of the scene."
+    "description": "Adding this much additional power to a weapon's ammunition is generally not sanctioned, but it is effective. You can spend this reserve to empower your weapons. The next successful ranged or melee attack you make can't have its damage reduced in any way, and the target must pass a Hull save or be knocked Prone. This effect ends when you hit with a ranged or melee attack roll, or at the end of the scene.",
+    "actions": [
+      {
+        "name": "Hot-Load Ammunition",
+        "activation": "Free",
+        "detail": "Spend this reserve to empower your weapons. Your next successful ranged or melee attack can't have its damage reduced in any way, and the target must pass a Hull save or be knocked Prone. This effect ends when you hit or at the end of the scene.",
+        "save": "hull",
+        "add_status": [{ "id": "prone" }]
+      }
+    ],
+    "active_effects": [
+      {
+        "name": "Hot-Load Ammunition",
+        "detail": "Your next successful ranged or melee attack can't have its damage reduced in any way, and the target must pass a Hull save or be knocked Prone."
+      }
+    ]
   },
   {
     "id": "reserve_recon_drone",
     "name": "Recon Drone",
     "type": "Tactical",
     "label": "Resource",
-    "description": "With the intense signal jamming blanketing the city, these high-ceiling, long-loiter drones provide some of the best intel a pilot is likely to get. At the start of each combat, choose a single hostile character within Range 50 and Scan them. This does not require line of sight."
+    "description": "With the intense signal jamming blanketing the city, these high-ceiling, long-loiter drones provide some of the best intel a pilot is likely to get. At the start of each combat, choose a single hostile character within Range 50 and Scan them. This does not require line of sight.",
+    "active_effects": [
+      {
+        "name": "Recon Drone",
+        "detail": "At the start of each combat, choose a single hostile character within Range 50 and Scan them. This does not require line of sight."
+      }
+    ]
   },
   {
     "id": "reserve_sniper_team",
     "name": "Sniper Team",
     "type": "Tactical",
     "label": "Resource",
-    "description": "LSA ground forces and Union marines are getting a crash-course in joint operations on this mission, and nothing builds teamwork like target shooting. You can spend this reserve at the start of any combat to call upon a nearby sniper team to provide you with fire support. For the rest of the scene, each time you take the Lock On Quick Tech action, your target takes 2 AP kinetic damage."
+    "description": "LSA ground forces and Union marines are getting a crash-course in joint operations on this mission, and nothing builds teamwork like target shooting. You can spend this reserve at the start of any combat to call upon a nearby sniper team to provide you with fire support. For the rest of the scene, each time you take the Lock On Quick Tech action, your target takes 2 AP kinetic damage.",
+    "actions": [
+      {
+        "name": "Call Sniper Support",
+        "activation": "Free",
+        "detail": "Spend this reserve to call upon a nearby sniper team for fire support. For the rest of the scene, each time you take the Lock On Quick Tech action, your target takes 2 AP kinetic damage.",
+        "damage": [{ "type": "Kinetic", "val": 2 }]
+      }
+    ]
   },
   {
     "id": "reserve_lookingglass",
     "name": "LOOKINGGLASS Overlay",
     "type": "Mech",
     "label": "Resource",
-    "description": "This head-mounted sensor add-on is capable of defeating even advanced thermal/optic/systemic camouflage systems, though it can only operate at that level of intensity for a short duration before burning out. You can spend this reserve during any combat to activate the sensors. For the rest of the scene you ignore soft cover and ignore Invisible for characters within Range 3. Hostile characters within Range 3 can’t become Hidden, though they remain Hidden if they were already."
+    "description": "This head-mounted sensor add-on is capable of defeating even advanced thermal/optic/systemic camouflage systems, though it can only operate at that level of intensity for a short duration before burning out. You can spend this reserve during any combat to activate the sensors. For the rest of the scene you ignore soft cover and ignore Invisible for characters within Range 3. Hostile characters within Range 3 can't become Hidden, though they remain Hidden if they were already.",
+    "actions": [
+      {
+        "name": "Activate LOOKINGGLASS",
+        "activation": "Free",
+        "detail": "Spend this reserve during combat. For the rest of the scene you ignore soft cover and ignore Invisible for characters within Range 3. Hostile characters within Range 3 can't become Hidden, though they remain Hidden if they were already."
+      }
+    ],
+    "active_effects": [
+      {
+        "name": "LOOKINGGLASS Overlay",
+        "detail": "You ignore soft cover and ignore Invisible for characters within Range 3. Hostile characters within Range 3 can't become Hidden."
+      }
+    ]
   },
   {
     "id": "reserve_leg_enhancements",
     "name": "Leg Enhancements",
     "type": "Mech",
     "label": "Resource",
-    "description": "Mechs are already built to navigate uneven terrain, but joint and servo reinforcements can make a good thing even better. Your mech ignores difficult terrain for the duration of the upcoming mission. Additionally, once during the mission you can spend this reserve to ignore Slowed or Immobilized received from a hostile source, negating the condition as it happens."
+    "description": "Mechs are already built to navigate uneven terrain, but joint and servo reinforcements can make a good thing even better. Your mech ignores difficult terrain for the duration of the upcoming mission. Additionally, once during the mission you can spend this reserve to ignore Slowed or Immobilized received from a hostile source, negating the condition as it happens.",
+    "active_effects": [
+      {
+        "name": "Leg Enhancements",
+        "detail": "Your mech ignores difficult terrain for the duration of the mission."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Override Leg Servos",
+        "activation": "Reaction",
+        "frequency": "1/mission",
+        "trigger": "You would receive Slowed or Immobilized from a hostile source.",
+        "detail": "Negate the Slowed or Immobilized condition as it happens."
+      }
+    ]
   },
   {
     "id": "reserve_high_mobility_pack",
     "name": "High-Mobility Pack",
     "type": "Mech",
     "label": "Resource",
-    "description": "The LSA uses these externally mounted flight units for rapid assault and air-drop operations, and the schematics are easy enough to modify and print to GMS standard. You can spend this reserve at the start of any combat to count any and all of your movement as flying for the rest of that scene. Additionally, you may deploy yourself anywhere on the map after all other characters (PCs and NPCs) have deployed."
+    "description": "The LSA uses these externally mounted flight units for rapid assault and air-drop operations, and the schematics are easy enough to modify and print to GMS standard. You can spend this reserve at the start of any combat to count any and all of your movement as flying for the rest of that scene. Additionally, you may deploy yourself anywhere on the map after all other characters (PCs and NPCs) have deployed.",
+    "actions": [
+      {
+        "name": "Activate High-Mobility Pack",
+        "activation": "Free",
+        "detail": "Spend this reserve at the start of combat. All your movement counts as flying for the rest of that scene. You may deploy yourself anywhere on the map after all other characters have deployed."
+      }
+    ],
+    "active_effects": [
+      {
+        "name": "High-Mobility Pack",
+        "detail": "All your movement counts as flying. You may deploy yourself anywhere on the map after all other characters have deployed."
+      }
+    ]
   },
   {
     "id": "reserve_golden_ticket",
@@ -66,13 +142,40 @@
     "name": "Personal Touch",
     "type": "Mech",
     "label": "Resource",
-    "description": "It looks like Vonna’s taken a shine to you, or at the very least taken a shine to your chassis. Your mech gains a free Custom Paint Job for the duration of the next mission, and you can also spend this reserve to gain +1 Accuracy on all mech skill checks and saves during a combat of your choice."
+    "description": "It looks like Vonna's taken a shine to you, or at the very least taken a shine to your chassis. Your mech gains a free Custom Paint Job for the duration of the next mission, and you can also spend this reserve to gain +1 Accuracy on all mech skill checks and saves during a combat of your choice.",
+    "active_effects": [
+      {
+        "name": "Custom Paint Job",
+        "detail": "Your mech gains a free Custom Paint Job for the duration of the next mission."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Personal Touch",
+        "activation": "Free",
+        "detail": "Spend this reserve during a combat of your choice to gain +1 Accuracy on all mech skill checks and saves for that combat."
+      }
+    ]
   },
   {
     "id": "reserve_return_to_sender",
     "name": "Return to Sender",
     "type": "Mech",
     "label": "Resource",
-    "description": "Using a captured artillery shell as a chassis-deployed improvised explosive device is incredibly unwise, but it’s probably not the worst decision a pilot’s ever made. Your mech is equipped with a powerful, single-use explosive. 1/mission, you can create a Blast 2 explosion within Range 3 as a quick action. Affected characters must pass an Agility save or take 3d6 explosive damage, or half damage on a success. Objects, cover, and terrain within the area automatically take 30 AP explosive damage. Only one PC can have this reserve at a time; anyone rolling this result again picks another reserve of their choice from this list."
+    "description": "Using a captured artillery shell as a chassis-deployed improvised explosive device is incredibly unwise, but it's probably not the worst decision a pilot's ever made. Your mech is equipped with a powerful, single-use explosive. 1/mission, you can create a Blast 2 explosion within Range 3 as a quick action. Affected characters must pass an Agility save or take 3d6 explosive damage, or half damage on a success. Objects, cover, and terrain within the area automatically take 30 AP explosive damage. Only one PC can have this reserve at a time; anyone rolling this result again picks another reserve of their choice from this list.",
+    "actions": [
+      {
+        "name": "Return to Sender",
+        "activation": "Quick",
+        "frequency": "1/mission",
+        "detail": "Create a Blast 2 explosion within Range 3. Affected characters must pass an Agility save or take 3d6 explosive damage, or half damage on a success. Objects, cover, and terrain within the area automatically take 30 AP explosive damage.",
+        "damage": [{ "type": "Explosive", "val": "3d6" }],
+        "range": [
+          { "type": "Range", "val": 3 },
+          { "type": "Blast", "val": 2 }
+        ],
+        "save": "agility"
+      }
+    ]
   }
 ]

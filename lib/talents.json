@@ -7,15 +7,68 @@
     "ranks": [
       {
         "name": "Frag and Clear",
-        "description": "When you use a Grenade, you may choose one character in the affected area to ignore its effects. Additionally, at the end of each scene, you restore 1 charge to each Limited system with the Mine tag for each undetonated Mine you deployed from that system."
+        "description": "When you use a Grenade, you may choose one character in the affected area to ignore its effects. Additionally, at the end of each scene, you restore 1 charge to each Limited system with the Mine tag for each undetonated Mine you deployed from that system.",
+        "active_effects": [
+          {
+            "name": "Frag and Clear",
+            "detail": "When you use a Grenade, you may choose one character in the affected area to ignore its effects. At the end of each scene, you restore 1 charge to each Limited system with the Mine tag for each undetonated Mine you deployed from that system."
+          }
+        ],
+        "synergies": [
+          {
+            "locations": ["grenade"],
+            "detail": "When you use a Grenade, you may choose one character in the affected area to ignore its effects."
+          },
+          {
+            "locations": ["mine"],
+            "detail": "At the end of each scene, you restore 1 charge to each Limited system with the Mine tag for each undetonated Mine you deployed from that system."
+          }
+        ]
       },
       {
         "name": "Quarterback",
-        "description": "Your Grenades gain +3 Range, and you can plant Mines up to Range 3 (or add +3 Range to them if they have one). Additionally, you do not require line of sight for Grenades and Mines as long as it’s possible to trace a path to the target."
+        "description": "Your Grenades gain +3 Range, and you can plant Mines up to Range 3 (or add +3 Range to them if they have one). Additionally, you do not require line of sight for Grenades and Mines as long as it's possible to trace a path to the target.",
+        "bonuses": [
+          {
+            "id": "range",
+            "val": 3,
+            "weapon_types": ["Grenade"]
+          }
+        ],
+        "active_effects": [
+          {
+            "name": "Quarterback",
+            "detail": "Your Grenades gain +3 Range, and you can plant Mines up to Range 3 (or add +3 Range). You do not require line of sight for Grenades and Mines as long as it's possible to trace a path to the target."
+          }
+        ],
+        "synergies": [
+          {
+            "locations": ["grenade", "mine"],
+            "detail": "Your Grenades gain +3 Range, you can plant Mines up to Range 3 (or add +3 Range), and you do not require line of sight for Grenades and Mines as long as it's possible to trace a path to the target."
+          }
+        ]
       },
       {
         "name": "Fire in the Hole",
-        "description": "<p>Your explosive charges have been enhanced with customized payloads. 1/round, you may choose one of the following:</p> <ul> <li>When you throw a Grenade, up to three characters within Range 3 of the targeted space take 2 explosive damage and are knocked back 1 space in a direction of your choice by explosive shrapnel.</li> <li>When a character fails a save against one of your Mines, they take +1d6 explosive bonus damage. If the mine deals no damage normally when detonated, whether it forces a save or not, one character in the affected area takes 1d6 explosive damage instead.</li> </ul>"
+        "description": "<p>Your explosive charges have been enhanced with customized payloads. 1/round, you may choose one of the following:</p> <ul> <li>When you throw a Grenade, up to three characters within Range 3 of the targeted space take 2 explosive damage and are knocked back 1 space in a direction of your choice by explosive shrapnel.</li> <li>When a character fails a save against one of your Mines, they take +1d6 explosive bonus damage. If the mine deals no damage normally when detonated, whether it forces a save or not, one character in the affected area takes 1d6 explosive damage instead.</li> </ul>",
+        "active_effects": [
+          {
+            "name": "Fire in the Hole",
+            "detail": "1/round, choose one: When you throw a Grenade, up to three characters within Range 3 of the targeted space take 2 explosive damage and are knocked back 1 space; OR when a character fails a save against your Mine, they take +1d6 explosive bonus damage (or 1d6 if the mine normally deals no damage).",
+            "frequency": "1/round"
+          }
+        ],
+        "synergies": [
+          {
+            "locations": ["grenade"],
+            "detail": "1/round, when you throw a Grenade, up to three characters within Range 3 of the targeted space take 2 explosive damage and are knocked back 1 space in a direction of your choice."
+          },
+          {
+            "locations": ["mine"],
+            "detail": "1/round, when a character fails a save against one of your Mines, they take +1d6 explosive bonus damage. If the mine deals no damage normally, one character in the affected area takes 1d6 explosive damage instead."
+          }
+        ],
+        "damage": [{ "type": "Explosive", "val": "1d6" }]
       }
     ]
   },
@@ -48,10 +101,17 @@
       {
         "name": "Aggressive Countermeasures",
         "description": "1/round, when you Bolster an ally, you induce a special cycle into their reactor. They reduce the next amount of heat they would take from a hostile character to 0, and that character takes 2 heat and becomes Impaired until the end of their next turn. This effect does not stack, and lasts until triggered.",
+        "active_effects": [
+          {
+            "name": "Aggressive Countermeasures",
+            "detail": "1/round, when you Bolster an ally, they reduce the next heat from a hostile character to 0, and that character takes 2 heat and becomes Impaired until the end of their next turn.",
+            "frequency": "1/round"
+          }
+        ],
         "synergies": [
           {
             "locations": ["bolster"],
-            "detail": " 1/round, when you Bolster an allied character, you induce a special cycle in their reactor. They reduce the next amount of heat they would take from a hostile character to 0, and that character takes 2 heat and becomes Impaired until the end of their next turn. This effect does not stack, and lasts until triggered."
+            "detail": "1/round, when you Bolster an allied character, you induce a special cycle in their reactor. They reduce the next amount of heat they would take from a hostile character to 0, and that character takes 2 heat and becomes Impaired until the end of their next turn. This effect does not stack, and lasts until triggered."
           }
         ]
       }

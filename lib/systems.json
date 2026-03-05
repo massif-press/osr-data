@@ -9,15 +9,21 @@
     "type": "AI",
     "sp": 3,
     "description": "<p>A major cornerstone of GMS's advanced technology initiative is the planned development of a next-generation companion/concierge system to replace the standard EPIPHANY-Class C/C currently in use by Union pilots. For reasons both practical as well as ethical, widespread dissemination of chassis-compatible C/C systems is currently being pushed by Union CentComm over military NHP design, and the ADJUTANT is the latest model to be approved for limited field trials following First Contact Accords compliance evaluation. Utilizing a new-model ontologic bridge framework, ADJUTANT allows for the use of selected simulant/reflex architectures to be uploaded to an engrammatic matrix for compatible pilot integration along both first- and second-tier neural processes. Long-term effects of repeated engrammatic synthesis are currently unknown, but early feedback is promising with test pilots reporting minimal difficulty expressing previously unheld aptitudes.</p>",
-    "tags": [{ "id": "tg_ai" }, { "id": "tg_no_cascade" }, { "id": "tg_unique" }, { "id": "tg_exotic" }],
+    "tags": [
+      { "id": "tg_ai" },
+      { "id": "tg_no_cascade" },
+      { "id": "tg_unique" },
+      { "id": "tg_exotic" }
+    ],
     "actions": [
       {
         "name": "Active Assist",
         "activation": "Free",
-        "detail": "1/scene, you may take a quick action of your choice. This action cannot be an attack or force any saves.",
-        "cost": 0
+        "frequency": "1/scene",
+        "detail": "1/scene, you may take a quick action of your choice. This action cannot be an attack or force any saves."
       }
-    ]
+    ],
+    "license_id": ""
   },
   {
     "id": "ms_pattern_c_advanced_charges",
@@ -29,21 +35,19 @@
     "type": "System",
     "sp": 3,
     "description": "<p>GMS’s latest intelligent munition system is a self-contained, multi-mode weapon designed to be easily deployable from a variety of chassis. Boasting advanced decision-making capabilities, each drone-tier charge is capable of independent target selection and interception, maintaining regular pilot-in-the-loop protocols to ensure optimal detonation parameters.</p>",
-    "tags": [
-      { "id": "tg_unique" },
-      { "id": "tg_limited", "val": 3 },
-      { "id": "tg_exotic" }
-    ],
+    "tags": [{ "id": "tg_unique" }, { "id": "tg_limited", "val": 3 }, { "id": "tg_exotic" }],
     "actions": [
       {
         "name": "Smart Grenade",
         "activation": "Quick",
         "detail": "All hostile characters within the affected area must pass a Systems save or take 1d6 energy damage and gain Lock On. On a success, they gain Lock On only.",
         "pilot": false,
+        "save": "systems",
+        "add_status": [{ "id": "lock_on" }],
         "damage": [{ "type": "Energy", "val": "1d6" }],
         "range": [
-          { "type": "Range", "val": "5" },
-          { "type": "Blast", "val": "1" }
+          { "type": "Range", "val": 5 },
+          { "type": "Blast", "val": 1 }
         ]
       }
     ],
@@ -65,7 +69,8 @@
           }
         ]
       }
-    ]
+    ],
+    "license_id": ""
   },
   {
     "id": "ms_miniaturized_linac_coherent_beam_cannon",
@@ -86,6 +91,7 @@
         "damage": [{ "type": "Energy", "val": 14 }],
         "range": [{ "type": "Line", "val": 30 }]
       }
-    ]
+    ],
+    "license_id": ""
   }
 ]
