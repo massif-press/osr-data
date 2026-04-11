@@ -3,13 +3,13 @@
   "author": "Massif Press",
   "description": "Player-side data for Operation Solstice Rain, a structured mission module for Lancer, written and designed by Kai Tave. Includes the GMS Chomolungma, new talents, and exotic gear.",
   "item_prefix": "osr",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "image_url": "https://img.itch.zone/aW1nLzExMTQ3Mzc4LnBuZw==/315x250%23cb/gKzgBK.png",
   "website": "https://massif-press.itch.io/operation-solstice-rain",
   "version_history": [
     {
       "version": "2.0.0",
-      "date": "2026-03-04",
+      "date": "2026-03-18",
       "changes": ["Updated to v3."]
     }
   ],
