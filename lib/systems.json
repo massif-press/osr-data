@@ -15,9 +15,10 @@
       { "id": "tg_unique" },
       { "id": "tg_exotic" }
     ],
-    "active_effects": [
+    "actions": [
       {
         "name": "Active Assist",
+        "activation": "Free",
         "detail": "1/scene, you may take a quick action of your choice. This action cannot be an attack or force any saves.",
         "frequency": "1/scene"
       }
@@ -34,7 +35,12 @@
     "type": "System",
     "sp": 3,
     "description": "<p>GMS’s latest intelligent munition system is a self-contained, multi-mode weapon designed to be easily deployable from a variety of chassis. Boasting advanced decision-making capabilities, each drone-tier charge is capable of independent target selection and interception, maintaining regular pilot-in-the-loop protocols to ensure optimal detonation parameters.</p>",
-    "tags": [{ "id": "tg_unique" }, { "id": "tg_limited", "val": 3 }, { "id": "tg_exotic" }],
+    "tags": [
+      { "id": "tg_unique" },
+      { "id": "tg_limited", "val": 3 },
+      { "id": "tg_exotic" },
+      { "id": "tg_grenade" }
+    ],
     "actions": [
       {
         "name": "Smart Grenade",
