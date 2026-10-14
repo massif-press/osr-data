@@ -28,13 +28,6 @@
       {
         "name": "Quarterback",
         "description": "Your Grenades gain +3 Range, and you can plant Mines up to Range 3 (or add +3 Range to them if they have one). Additionally, you do not require line of sight for Grenades and Mines as long as it's possible to trace a path to the target.",
-        "bonuses": [
-          {
-            "id": "range",
-            "val": 3,
-            "weapon_types": ["Grenade"]
-          }
-        ],
         "active_effects": [
           {
             "name": "Quarterback",
